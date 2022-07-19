@@ -52,9 +52,9 @@ class UDFClass:
 if __name__ == '__main__':
     f = open('example.py', 'r')
     module = ast.parse(f.read())
-    print(1)
+    print(1, 'Parsing of Function in example.py')
     simple_function_parsing(module)
-    print(2)
+    print(2, 'Parsing of Class Method in example.py')
     class_method_parsing(module, 'Demo', 'simple_function')
-    print(3)
+    print(3, 'Parsing of Class Method Here!')
     UDFClass().parse_run_all()
