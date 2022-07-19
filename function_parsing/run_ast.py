@@ -49,6 +49,25 @@ class UDFClass:
         class_method_parsing(module, __class__.__name__, 'run_all')
 
 
+# 4. HW: Adapting rull_all and all the class methods called in run_all to cudf apply_row
+
+class TargetClass:
+    def __init__(self):
+        pass
+
+    def run_all(self, x, y, c=12):
+        x = self.plus_one(x)
+        y = c + x
+        y = self.__times_2(y)
+        return x + y
+
+    def plus_one(self, x):
+        return x + 1
+
+    def __times_2(self, x):
+        return x * 2
+
+
 if __name__ == '__main__':
     f = open('example.py', 'r')
     module = ast.parse(f.read())
