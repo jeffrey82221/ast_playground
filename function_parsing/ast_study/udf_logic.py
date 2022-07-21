@@ -91,7 +91,7 @@ class UDFLogic:
                         and in_cls_node.name == "run_all"
                     ):
                         # Retrieve udf input columns (arguments)
-                        run_all_inputs = in_cls_node.args.args.copy()
+                        run_all_inputs = in_cls_node.args.args
                         run_all_inputs.pop(0)  # Remove parameter `self`
 
                         # Retrieve udf output columns (returns)
